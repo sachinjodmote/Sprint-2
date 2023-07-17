@@ -1,0 +1,23 @@
+<div class="container">
+    <h2 class="text-center">Student List</h2>
+    
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Branch</th>
+                
+            </tr>
+        </thead>
+        <tbody *ngFor="let branch of branches" >
+                <td>{{branch.dtoid}}</td>
+                <td>{{branch.dtobranch}}</td>
+               
+                <td>
+                    <button (click)="updateBranch(branch.dtoid)" class="btn btn-info">Update</button>
+                    <button (click)="deleteBranch(branch.dtoid)" class="btn btn-info">Delete</button>
+                </td>
+        </tbody>
+    </table>
+    </div>
+    
